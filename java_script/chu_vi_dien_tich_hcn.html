@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<h1>Tính chu vi và diện tích HCN</h1>
+<input type="number" id="Dài" oninput="Tínhchuvi(); Tínhdiệntích()" placeholder="Chiều dài">
+<input type="number" id="Rộng" oninput="Tínhchuvi(); Tínhdiệntích()" placeholder="Chiều rộng">
+<button onclick="Tínhchuvi()" id="Chu vi" >Tính chú vi</button>
+<button onclick="Tínhdiệntích()" id="Diện tích" >Tính diện tích</button>
+
+<script>
+    function Tínhchuvi() {
+        let Dai = parseFloat(document.getElementById("Dài").value);
+        let Rong = parseFloat(document.getElementById("Rộng").value);
+        let Chuvi = 2*(Dai+Rong);
+        document.getElementById("Chu vi").innerHTML = "<h>Chu vi:</h>" + Chuvi ;
+    }
+    function Tínhdiệntích() {
+        let Dai = parseFloat(document.getElementById("Dài").value);
+        let Rong = parseFloat(document.getElementById("Rộng").value);
+        let Dientich = Dai*Rong;
+        document.getElementById("Diện tích").innerHTML = "<h>Diện tích:</h>" + Dientich ;
+    }
+</script>
+</body>
+</html>
