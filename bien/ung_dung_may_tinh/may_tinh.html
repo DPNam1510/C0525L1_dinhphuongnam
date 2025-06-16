@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<table>
+    <tr>
+        <td colspan="2">
+            <input type="number" id="A">
+        </td>
+        <td colspan="2">
+            <input type="number" id="B">
+        </td>
+    </tr>
+    <tr>
+        <td onclick="add(event)">
+            <button type="submit"  id="+">Addition+</button>
+        </td>
+        <td onclick="Sub(event)">
+            <button type="submit" id="-">Subtraction-</button>
+        </td>
+        <td onclick="Mul(event)">
+            <button type="submit" id="*">Multiplication*</button>
+        </td>
+        <td onclick="Div(event)">
+            <button type="submit" id="/">Division/</button>
+        </td>
+    </tr>
+</table>
+<p>Result Division: <span id="Result"></span></p>
+<script>
+    function add(event) {
+        let a = parseFloat(document.getElementById("A").value);
+        let b = parseFloat(document.getElementById("B").value);
+        let ad = a + b;
+        document.getElementById("Result").innerHTML = ad;
+    }
+
+    function Sub(event) {
+        let a = parseFloat(document.getElementById("A").value);
+        let b = parseFloat(document.getElementById("B").value);
+        let su = a - b;
+        document.getElementById("Result").innerHTML = su;
+    }
+
+    function Mul(event) {
+        let a = parseFloat(document.getElementById("A").value);
+        let b = parseFloat(document.getElementById("B").value);
+        let mul = a * b;
+        document.getElementById("Result").innerHTML = mul;
+    }
+
+    function Div(event) {
+        let a = parseFloat(document.getElementById("A").value);
+        let b = parseFloat(document.getElementById("B").value);
+        let div = a / b;
+        document.getElementById("Result").innerHTML = div;
+    }
+</script>
+</body>
+</html>
