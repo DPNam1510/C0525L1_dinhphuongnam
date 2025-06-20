@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<input type="text" id="weight"  placeholder="weight">
+<input type="text" id="height"  placeholder="height">
+<button type="submit" onclick="TinhTinhTrang()">Tính tình trạng</button>
+<p>Result:<span id="result"></span></p>
+<script>
+    function TinhTinhTrang() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+        let BMI = weight / (height * height);
+        document.getElementById("result").innerHTML = BMI;
+        if (BMI < 18.5) {
+            document.getElementById("result").innerHTML = "underweight";
+        } else if (BMI >= 18.5 && BMI < 25) {
+            document.getElementById("result").innerHTML = "normal";
+        } else if (BMI >= 25 && BMI < 30) {
+            document.getElementById("result").innerHTML = "overweight";
+        } else if (BMI >= 30) {
+            document.getElementById("result").innerHTML = "obese";
+        }
+    }
+</script>
+</body>
+</html>
+
