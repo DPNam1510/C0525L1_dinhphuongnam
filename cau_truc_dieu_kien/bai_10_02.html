@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let mucSuDungDien = parseFloat(prompt("Nhập mức sử dụng điện"));
+    let giaDienTheoBac;
+    let tienDien;
+    if (mucSuDungDien <= 50) {
+        giaDienTheoBac = 1500;
+        tienDien = mucSuDungDien * giaDienTheoBac;
+        alert(`tiền điện tháng này là: ${tienDien} Đồng`);
+    } else if (mucSuDungDien <= 100) {
+        giaDienTheoBac = 2000;
+        tienDien = mucSuDungDien * giaDienTheoBac;
+        alert(`tiền điện tháng này là: ${tienDien} Đồng`);
+    } else if (mucSuDungDien <= 200) {
+        giaDienTheoBac = 2500;
+        tienDien = mucSuDungDien * giaDienTheoBac;
+        alert(`tiền điện tháng này là: ${tienDien} Đồng`);
+    } else if (mucSuDungDien <= 300) {
+        giaDienTheoBac = 3000;
+        tienDien = mucSuDungDien * giaDienTheoBac;
+        alert(`tiền điện tháng này là: ${tienDien} Đồng`);
+    } else {
+        giaDienTheoBac = 3500;
+        tienDien = mucSuDungDien * giaDienTheoBac;
+        alert(`tiền điện tháng này là: ${tienDien} Đồng`);
+    }
+</script>
+</body>
+</html>
