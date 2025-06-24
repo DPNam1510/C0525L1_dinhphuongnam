@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<input type="text" id="id1" placeholder="nội mạng">
+<input type="text" id="id2" placeholder="ngoại mạng">
+<input type="button" onclick="tinhTien()" value="Kết quả">
+<p>Result:<span id="result"></span></p>
+<script>
+    function tinhTien() {
+        let internal = parseFloat(document.getElementById("id1").value);
+        let off = parseFloat(document.getElementById("id2").value);
+        let total = internal + off;
+        if (total > 1510) {
+            total = internal + (off * 2);
+        } else if (total > 1000) {
+            total = internal + (off * 1.5)
+        }
+        document.getElementById("result").innerHTML = total;
+    }
+</script>
+</body>
+</html>

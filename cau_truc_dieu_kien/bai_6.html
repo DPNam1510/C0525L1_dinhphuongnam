@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<h>Doanh số trên 100 triệu: hoa hồng 10%</h>
+<br>
+<h>Doanh số trên 200 triệu: hoa hồng 20%</h>
+<br>
+<h>Doanh số trên 300 triệu: hoa hồng 30%</h>
+<br>
+<input type="text" id="id" placeholder="Doanh số">
+<input type="button" onclick="hoaHong()" value="Hiển thị">
+<p>Result:<span id="result"></span></p>
+<script>
+    function hoaHong() {
+        let sales = document.getElementById("id").value;
+        let money;
+        if (sales >= 300) {
+            money = sales * 30 / 100;
+        } else if (sales >= 200) {
+            money = sales * 20 / 100;
+        } else if (sales >= 100) {
+            money = sales * 10 / 100;
+        }
+        document.getElementById("result").innerHTML = `${money}` ;
+    }
+</script>
+</body>
+</html>

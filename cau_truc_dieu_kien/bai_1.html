@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<input type="text" id="a" placeholder="a">
+<input type="text" id="b" placeholder="b">
+<input type="button" onclick="kiemTra()" value="Result">
+<script>
+    function kiemTra() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        if (a % b == 0) {
+            alert(`số a chia hết cho b`)
+        } else {
+            alert(`số a không chia hết cho b`)
+        }
+    }
+</script>
+</body>
+</html>

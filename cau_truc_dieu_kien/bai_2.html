@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<input type="text" id="number" placeholder="number">
+<input type="button" onclick="kiemTra()" value="Result">
+<script>
+  function kiemTra(){
+    let age = document.getElementById("number").value;
+    if(age >= 16){
+      alert("Đủ điều kiện vào lớp 10")
+    }else{
+      alert("Không đủ điều kiện vào lớp 10")
+    }
+  }
+</script>
+</body>
+</html>
