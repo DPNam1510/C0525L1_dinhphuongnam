@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let fn0 = 0;
+    let fn1 = 1;
+    let display = fn0 + fn1;
+    for (let i = 7; i <=30; i++) {
+        let fn = fn0 + fn1;
+        if(fn % 7 === 0){
+            display += fn;
+        }
+        fn0 = fn1;
+        fn1 = fn;
+    }
+    alert(`Tổng 30 số đầu tiên: ${display}`);
+</script>
+</body>
+</html>
