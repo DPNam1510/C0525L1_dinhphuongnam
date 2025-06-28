@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let salary = prompt("Tiền lương hàng tháng");
+    if (salary <= 5000000) {
+        let tax = salary * 0.05;
+        alert(`Thuế thu nhập cá nhân là: ${tax}`);
+    } else if (salary <= 10000000) {
+        let tax = salary * 0.1;
+        alert(`Thuế thu nhập cá nhân là: ${tax}`);
+    } else if (salary <= 18000000) {
+        let tax = salary * 0.15;
+        alert(`Thuế thu nhập cá nhân là: ${tax}`);
+    } else if (salary <= 32000000) {
+        let tax = salary * 0.2;
+        alert(`Thuế thu nhập cá nhân là: ${tax}`);
+    }else{
+        alert("Giàu");
+    }
+</script>
+</body>
+</html>

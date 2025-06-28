@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+  let P = prompt("Số tiền gốc");
+  let r = prompt("Lãi suất hàng tháng");
+  let n = prompt("Số tháng gửi lãi");
+  let A = P * (1 + r)^n;
+  if(n <= 3){
+    alert(`Số tiền lãi là: ${A} `);
+  }else if(n <= 6){
+    let A = P * (1 + r + 0.005)^n;
+    alert(`Số tiền lãi là: ${A}`);
+  }else if(n <= 9) {
+    let A = P * (1 + r + 0.01) ^ n;
+    alert(`Số tiền lãi là: ${A}`);
+  }else if(n <= 12) {
+    let A = P * (1 + r + 0.015) ^ n;
+    alert(`Số tiền lãi là: ${A}`);
+  }else{
+    alert("Giàu");
+  }
+</script>
+</body>
+</html>
