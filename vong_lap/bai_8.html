@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<button onclick="play()">Chơi</button>
+<script>
+    function play() {
+        let min = prompt("Nhập số nhỏ nhất");
+        let max = prompt("Nhập số lớn nhất");
+        let display = min + Math.ceil(Math.random()*(max-min));
+        for (i = 1; i <= 3; i++) {
+            let number = +prompt("Số dự đoán");
+            if (number === display) {
+                alert("Bạn đã đoán đúng");
+            } else if (number < display) {
+                alert("Số bạn chọn nhỏ hơn dự đoán");
+            } else {
+                alert("Số bạn chọn lớn hơn dự đoán")
+            }
+        }
+        if (i === 3) {
+            alert("Quá số lượt");
+        }
+    }
+</script>
+</body>
+</html>

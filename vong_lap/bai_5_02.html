@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let P = prompt("Số tiền gốc");
+    let r = prompt("Lãi suất hàng tháng");
+    let n = prompt("Số tháng gửi lãi");
+    let display = 1;
+    for (let i = 1; i <= n; i++) {
+        let A = P * (1 + r) ;
+        display += A;
+    }
+    alert(`${display}`)
+</script>
+</body>
+</html>
