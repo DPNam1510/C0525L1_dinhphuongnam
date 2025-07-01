@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let array = new Array(5);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt(`Số thứ ${i}`);
+    }
+    let number = +prompt("Nhập phần tử");
+    let check;
+    for (let i = 0; i < array.length; i++) {
+        if (number === array[i]) {
+            check = true;
+        }
+    }
+    if (check === true) {
+        alert(`${number} is in the array`);
+    } else {
+        alert(`${number} is not in the array`);
+    }
+</script>
+</body>
+</html>

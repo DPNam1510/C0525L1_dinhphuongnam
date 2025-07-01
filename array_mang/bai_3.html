@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Số lương số nguyên");
+    let array = new Array(n);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt(`Số thứ ${i}`)
+    }
+    let max = array[0];
+    let sum = 1;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+        if (max < array[i]) {
+            max = array[i];
+        }
+    }
+    alert(`Giá trị lớn nhất là: ${max} và giá trị trung bình là:` + sum / array.length);
+</script>
+</body>
+</html>

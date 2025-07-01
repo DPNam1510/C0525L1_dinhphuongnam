@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let array = new Array(10);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt(`Số thứ ${i}`);
+    }
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (max < array[i]) {
+            max = array[i];
+        }
+    }
+    alert(`Số lớn nhất là: ${max} , ở vị trí ${array.indexOf(max) + 1}`);
+</script>
+</body>
+</html>

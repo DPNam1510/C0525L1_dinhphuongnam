@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Số lượng phần tử trong dãy");
+    let array = new Array(n);
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt(`Số thứ ${i}`);
+        if (array[i] < 0) {
+            count++
+        }
+    }
+    alert(`số lượng số nguyên âm là: ${count}`);
+
+</script>
+</body>
+</html>

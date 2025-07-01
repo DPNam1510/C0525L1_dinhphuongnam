@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let array = new Array(10);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt(`Số thứ ${i}`);
+    }
+    alert(`Dãy phần tử ban đầu: ${array}`);
+    array.sort(function (a, b) {
+        return b - a;
+    });
+    alert(`Dãy phần tử giảm dần: ${array}`);
+</script>
+</body>
+</html>

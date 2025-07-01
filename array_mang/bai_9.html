@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let arrayA = new Array(10);
+    let arrayB = new Array(10);
+    let arrayC = new Array(20);
+    for (let i = 0; i < arrayA.length; i++) {
+        arrayA[i] = +prompt(`Số thứ ${i}`);
+    }
+    alert(`Dãy phần tử A: ${arrayA}`);
+    for (let i = 0; i < arrayB.length; i++) {
+        arrayB[i] = +prompt(`Số thứ ${i}`);
+    }
+    alert(`Dãy phần tử B: ${arrayB}`);
+    for (let i = 0; i < arrayC.length; i++) {
+        arrayC[i] = +prompt(`Số thứ ${i}`);
+    }
+    alert(`Dãy phần tử C: ${arrayC}`);
+    let newArray = arrayA.concat(arrayB);
+    let newArrayC = newArray.concat(arrayC);
+    alert(`Dãy phần tử C sau khi nối: ${newArrayC}`);
+
+
+</script>
+</body>
+</html>
