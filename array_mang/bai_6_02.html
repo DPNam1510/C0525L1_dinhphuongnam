@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Số phần tử");
+    let array = new Array(n);
+    for (let i = 0; i < n; i++) {
+        array[i] = prompt(`Số thứ ${i}`);
+    }
+    for(let i = 0; i < n; i++){
+        if(array[i] === "-"){
+            array[i] = "_";
+        }
+    }alert(`mảng sau khi thay thế là: ${array}`);
+</script>
+</body>
+</html>

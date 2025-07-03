@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Số lượng phần tử:");
+    let array1 = new Array(n);
+    for (let i = 0; i < array1.length; i++) {
+        array1[i] = +prompt(`Số thứ ${i}`);
+    }
+    alert("Mảng 1:");
+    let array2 = new Array(n);
+    for (let i = 0; i < array2.length; i++) {
+        array2[i] = +prompt(`Số thứ ${i}`);
+    }
+    alert("Mảng 2:");
+    let check = true;
+    for (let i = 0; i <= n; i++) {
+        if (array1[i] != array2[i]) {
+            check = false;
+        }
+    }
+    if (check) {
+        alert("2 chuỗi giống nhau");
+    } else {
+        alert("2 chuỗi khác nhau");
+    }
+</script>
+</body>
+</html>
