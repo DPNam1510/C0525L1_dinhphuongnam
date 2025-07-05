@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<input type="text" id="text" placeholder="index">
+<select id="from">
+    <option value="1">metter</option>
+    <option value="3.279">foot</option>
+</select>
+<select id="to">
+    <option value="3.279">foot</option>
+    <option value="1">metter</option>
+</select>
+<button type="submit" onclick="Result()">Change</button>
+<p>Result:<span id="result"></span></p>
+<script>
+    function Result() {
+        let amount = document.getElementById("text").value;
+        let met = document.getElementById("from").value;
+        let feet = document.getElementById("to").value;
+        let change = amount * feet / met;
+        document.getElementById("result").innerHTML = change;
+
+    }
+</script>
+</body>
+</html>

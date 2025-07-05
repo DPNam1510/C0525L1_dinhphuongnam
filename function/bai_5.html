@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = prompt("nameStar:");
+    let nameStar = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let star = ["UrsaMinor", "Taurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+    letFind();
+
+    function letFind() {
+        let find = false;
+        for (let i = 0; i < nameStar.length; i++) {
+            if (nameStar[i] === n) {
+                alert(`Correspon star: ${star[i]}`);
+                find = true;
+            }
+        }
+        if (!find) {
+            alert("Not found!");
+        }
+    }
+</script>
+</body>
+</html>
