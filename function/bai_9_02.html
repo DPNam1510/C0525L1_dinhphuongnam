@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Quantity index:");
+    let array = new Array(n);
+    let check;
+    let num = +prompt("random index");
+    let count = 0;
+    findCharacter();
+
+    function findCharacter() {
+        for (let i = 0; i < array.length; i++) {
+            array[i] = +prompt(`Input ${i}`);
+        }
+        for (let i = 0; i < array.length; i++) {
+            if (num === array[i]) {
+                check = true;
+                count++;
+            }
+        }
+        if (check === true) {
+            alert(`Index ${num} appears ${count} times!`);
+        } else {
+            alert("-1");
+        }
+    }
+</script>
+</body>
+</html>

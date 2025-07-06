@@ -9,17 +9,17 @@
     let n = prompt("nameStar:");
     let nameStar = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
     let star = ["UrsaMinor", "Taurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+    let find = false;
     letFind();
 
     function letFind() {
-        let find = false;
         for (let i = 0; i < nameStar.length; i++) {
             if (nameStar[i] === n) {
                 alert(`Correspon star: ${star[i]}`);
                 find = true;
             }
         }
-        if (!find) {
+        if (find === false) {
             alert("Not found!");
         }
     }

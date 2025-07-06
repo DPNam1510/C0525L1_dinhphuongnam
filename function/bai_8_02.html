@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Quantity number:");
+    let array = new Array(n);
+    reverseArray();
+
+    function reverseArray() {
+        for (let i = 0; i < array.length; i++) {
+            array[i] = +prompt(`Input ${i}`);
+        }
+        alert(`Array:${array}`);
+    }
+
+    alert(`Reverse array:${array.reverse()}`);
+</script>
+</body>
+</html>

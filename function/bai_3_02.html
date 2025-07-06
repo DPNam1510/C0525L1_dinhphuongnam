@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = +prompt("number");
+    let numberFactorial = 1;
+    factorial();
+
+    function factorial() {
+        if (n < 0) {
+            alert("No display!");
+        } else {
+            for (let i = 1; i <= n; i++) {
+                numberFactorial *= i;
+            }
+        }
+        return numberFactorial;
+
+    }
+
+    alert(`Factorial of number: ${numberFactorial}`);
+
+</script>
+</body>
+</html>

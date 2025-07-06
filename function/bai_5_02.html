@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+  let a = +prompt("number A:");
+  let b = +prompt("number B:");
+  let c = +prompt("number C:");
+  minNumber();
+  function minNumber(){
+    if(a < b && a < c){
+      alert(`Number min: ${a}`);
+    }else if(b < c){
+      alert(`Number min: ${b}`);
+    }else{
+      alert(`Number min: ${c}`);
+    }
+  }
+</script>
+</body>
+</html>

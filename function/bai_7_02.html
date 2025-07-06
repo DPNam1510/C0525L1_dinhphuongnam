@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let array = new Array(2)
+    reverseNumber();
+
+    function reverseNumber() {
+        for (let i = 0; i < array.length; i++) {
+            array[i] = +prompt(`Input ${i}`);
+        }
+        alert(`Array:${array}`);
+    }
+
+    alert(`New array:${array.reverse()}`);
+</script>
+</body>
+</html>
