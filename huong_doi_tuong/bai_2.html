@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        celsius;
+
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+getConvertToFahrenheit(){
+            return (this.celsius * 9/5) + 32;
+}
+getConvertToKelvin(){
+            return (this.celsius + 273.15);
+}
+setCelsius(celsius){
+            this.celsius = celsius;
+}
+    }
+    let temperature = new Temperature(10);
+    temperature.setCelsius(37);
+    alert(`C to F: ${temperature.getConvertToFahrenheit()}`);
+    alert(`C to K: ${temperature.getConvertToKelvin()}`);
+</script>
+</body>
+</html>

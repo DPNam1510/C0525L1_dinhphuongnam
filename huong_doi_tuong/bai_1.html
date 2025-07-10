@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        length;
+        width;
+
+        constructor(Length, Width) {
+            this.length = Length;
+            this.width = Width;
+        }
+
+        getPerimeter() {
+            return (this.length + this.width) * 2;
+        }
+
+        getAcreage() {
+            return this.length * this.width;
+        }
+
+        setLengthAndWidth(Length, Width) {
+            this.length = Length;
+            this.width = Width;
+        }
+    }
+
+    let rectangle1 = new Rectangle(5, 10);
+    rectangle1.setLengthAndWidth(15, 20);
+    alert(`New perimeter: ${rectangle1.getPerimeter()}`);
+    alert(`New acreage: ${rectangle1.getAcreage()}`);
+</script>
+</body>
+</html>
