@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<h>Add new product</h>
+<br>
+<input type="text" id="name" placeholder="New Product">
+<input type="number" id="price" placeholder="Price">
+<button type="submit" onclick="addProduct()">Add</button>
+<p id="result"></p>
+<script>
+    class Product {
+        name;
+        price;
+
+        constructor(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+    }
+
+    let productList = [];
+    showList(productList);
+
+    function showList(list) {
+        let showTable = `<table border="1" style="border-collapse: collapse;">
+                                <tr>
+                                        <th>STT</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                </tr>`;
+        for (let i = 0; i < list.length; i++) {
+            showTable += `<tr>
+<td>${i + 1}</td>
+<td>${list[i].name}</td>
+<td>${list[i].price}</td>
+<td><button onclick="editProduct(${i})">Edit</button></td>
+<td><button onclick="deleteProduct(${i})">Delete</button></td>
+</tr>`
+        }
+        showTable += `</table>`
+        document.getElementById("result").innerHTML = showTable;
+    }
+
+    function addProduct() {
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let newProduct = new Product(name, price);
+        productList.push(newProduct);
+        showList(productList);
+    }
+
+    function editProduct(index) {
+        let edit = prompt("Enter a new name for " + productList[index].name);
+        let cost = +prompt("Enter a new price for " + productList[index].name);
+        productList[index].name = edit;
+        productList[index].price = cost;
+        showList(productList);
+    }
+
+    function deleteProduct(index) {
+        let clear = confirm("Do you want delete " + productList[index].name + "?");
+        if (clear) {
+            productList.splice(index, 1);
+        }
+        showList(productList);
+    }
+
+</script>
+</body>
+</html>
