@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    function checkArray(array) {
+        countInteger = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 === 0) {
+                countInteger++;
+            }
+        }
+        if (countInteger === array.length) {
+            return 1;
+        } else if (countInteger === 0) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
+    let array1 = [0,2,8,12,4];
+    let array2 = [1,7,3,1];
+    let array3 = [1,2,9,4];
+    alert(checkArray(array1));
+    alert(checkArray(array2));
+    alert(checkArray(array3));
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Input index:");
+    let array = new Array(n);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt(`number ${i}`);
+    }
+    for (let i = 0; i < array.length / 2; i++) {
+        check = true
+        if (array[i] !== array[array.length - 1 - i]) {
+            check = false;
+        } else {
+            check = true;
+            break;
+        }
+    }
+    if (check === true) {
+        alert("OK!");
+    } else {
+        alert("NO!");
+    }
+</script>
+</body>
+</html>

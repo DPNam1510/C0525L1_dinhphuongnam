@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPn</title>
+</head>
+<body>
+<script>
+    function find(x) {
+        let arrayX = x.split("/");
+        if (arrayX.length === 2) {
+            numerator = arrayX[0];
+            denominator = arrayX[1];
+            if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+                if (numerator >= denominator) {
+                    shortNumerator = numerator / denominator;
+                    return `${shortNumerator}`;
+                } else {
+                    shortDenominator = denominator / numerator;
+                    return `${shortDenominator}`;
+                }
+            } else {
+                alert("Not a fraction");
+            }
+        } else {
+            alert("Not a fraction");
+        }
+    }
+
+    let number = prompt("Index:");
+    alert(find(number));
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function checkArray(array) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (isPrime(array[i])) {
+                count++;
+            } else {
+                break;
+            }
+        }
+        if (count === array.length) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    let array1 = [11, 3, 2, 7];
+    let array2 = [1, 3, 4, 2, 6];
+    alert(checkArray(array1));
+    alert(checkArray(array2));
+</script>
+</body>
+</html>
