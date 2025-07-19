@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    function checkArr(array) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 === 0) {
+                count++
+            }
+        }
+        if (count === array.length) {
+            return 1;
+        } else if (count === 0) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
+
+    let arr1 = [0, 2, 8, 12, 4];
+    let arr2 = [1, 7, 3, 1];
+    let arr3 = [1, 2, 9, 4];
+    alert(checkArr(arr1));
+    alert(checkArr(arr2));
+    alert(checkArr(arr3));
+</script>
+</body>
+</html>

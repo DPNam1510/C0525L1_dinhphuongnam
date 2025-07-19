@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    function checkTriangle(x, y, z) {
+
+        if (x > 0 && y > 0 && z > 0 && x + y > z && y + z > x && z + x > y) {
+            if (x ^ 2 + y ^ 2 === z ^ 2 || y ^ 2 + z ^ 2 === x ^ 2 || z ^ 2 + x ^ 2 === y ^ 2) {
+                return `The 3 sides of a right triangle`;
+            }
+            return `The 3 sides of a triangle`;
+        }else{
+            return `Not the 3 sides of a triangle`;
+        }
+    }
+
+    let x = +prompt("Side 1:");
+    let y = +prompt("Side 2:");
+    let z = +prompt("Side 3:");
+    alert(checkTriangle(x, y, z));
+
+</script>
+</body>
+</html>
