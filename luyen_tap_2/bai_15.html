@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    function checkStr() {
+        let quantity = str.split(" ");
+        let newWord = "";
+        if (quantity.length === 1) {
+            alert("The string has only 1 word so no abbreviation is needed!");
+            newWord = quantity;
+            return newWord;
+        } else {
+            for (let i = 0; i < quantity.length; i++) {
+                let acronym = quantity[i][0].toUpperCase();
+                newWord += acronym;
+            }
+            return newWord;
+        }
+    }
+
+    let str = prompt("Input string");
+    alert(checkStr(str));
+</script>
+</body>
+</html>

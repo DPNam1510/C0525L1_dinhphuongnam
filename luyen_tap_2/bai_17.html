@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<h1>Danh bạ điện thoại</h1><br>
+<input type="text" id="phone" placeholder="Phone number">
+<input type="text" id="people" placeholder="Input people ">
+<input type="text" id="address" placeholder="Address">
+<button type="submit" onclick="addPhoneNumber()">Add phone number</button>
+<p id="result"></p>
+
+<script>
+    class phoneBook {
+        number1;
+        people;
+        address;
+
+        constructor(number, people, address) {
+            this.number1 = number;
+            this.people = people;
+            this.address = address;
+        }
+    }
+
+    let phoneList = []
+    showList(phoneList);
+
+    function showList(list) {
+        let showTable = `<table id="phoneBook" border="1" style="border-collapse: collapse">
+    <tr>
+        <th>STT</th>
+        <th>Phone number</th>
+        <th>People</th>
+        <th>Address</th>
+        <th>Function</th>
+    </tr>`
+        for (let i = 0; i < list.length; i++) {
+            showTable += `<tr>
+<td>${i + 1}</td>
+<td>${list[i].number1}</td>
+<td>${list[i].people}</td>
+<td>${list[i].address}</td>
+<td><button onclick="deletePhone(${i})">Xóa</button></td>
+</tr>`
+        }
+        showTable += `</table>`
+        document.getElementById("result").innerHTML = showTable;
+    }
+
+    function addPhoneNumber() {
+        let number = document.getElementById("phone").value;
+        let people = document.getElementById("people").value;
+        let address = document.getElementById("address").value;
+        let newPhone = new phoneBook(number,people,address);
+        phoneList.push(newPhone);
+        showList(phoneList);
+    }
+
+    function deletePhone(index) {
+        let del = confirm("Do you want delete " + phoneList[index].number1 + "?")
+        if (del) {
+            phoneList.splice(index, 1);
+        }
+        showList(phoneList);
+    }
+</script>
+
+</body>
+</html>
