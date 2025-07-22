@@ -5,10 +5,100 @@
     <title>DPN</title>
 </head>
 <body>
-<button type="submit" id="add" onclick="addMember()" >Thêm mới học viên</button>
-<button type="submit" id="edit" onclick="editMember()">Sửa thông tin học viên</button>
-<button></button>
-<table>
-</table>
+<h1>Hệ thống quản lý học viên CODEGYM</h1><br>
+<button type="submit" onclick="addStudent()">Thêm mới học viên</button>
+<button type="submit" onclick="editStudent()">Sửa thông tin học viên</button>
+<button type="submit" onclick="deleteStudent()">Xóa học viên</button>
+<p id="result"></p>
+<script>
+    class student {
+        id1;
+        name1;
+        grade;
+        email;
+        date;
+
+        constructor(id, name, grade, email, date) {
+            this.id1 = id;
+            this.name1 = name;
+            this.grade = grade;
+            this.email = email;
+            this.date = date;
+
+        }
+    }
+
+    let studentList = [];
+    showList(studentList);
+
+    function showList(list) {
+        let showTable = `<table id="student" border="1" style="border-collapse: collapse">
+<tr>
+<th>Mã học viên</th>
+<th>tên</th>
+<th>Lớp</th>
+<th>Email</th>
+<th>Ngày sinh</th>
+</tr>`
+        for (let i = 0; i < list.length; i++) {
+            showTable += `<tr>
+<td>${list[i].id1}</td>
+<td>${list[i].name1}</td>
+<td>${list[i].grade}</td>
+<td>${list[i].email}</td>
+<td>${list[i].date}</td>
+</tr>`
+        }
+        showTable += `</table>`
+        document.getElementById("result").innerHTML = showTable;
+    }
+
+    function addStudent() {
+        let id = prompt("Nhập mã:");
+        let name = prompt("Nhập tên:");
+        let grade = prompt("Nhập lớp:");
+        let email = prompt("Nhập email:");
+        let date = prompt("nhập ngày sinh:");
+        let newStudent = new student(id, name, grade, email, date);
+        studentList.push(newStudent);
+        showList(studentList);
+    }
+
+    function editStudent() {
+        let findId = prompt("Mã học viên cần sửa:");
+        for (let i = 0; i < studentList.length; i++) {
+            if (studentList[i].id1 !== findId) {
+                alert("Mã học viên không tồn tại");
+            } else {
+                let newName = prompt("Tên mới:");
+                let newGrade = prompt("Lớp mới:");
+                let newEmail = prompt("Email mới:");
+                let newDate = prompt("Ngày sinh mới:");
+                studentList[i].name1 = newName;
+                studentList[i].grade = newGrade;
+                studentList[i].email = newEmail;
+                studentList[i].date = newDate;
+            }
+        }
+        showList(studentList);
+    }
+
+    function deleteStudent() {
+        let del = prompt("Mã học viên muốn xóa");
+        for (let i = 0; i < studentList.length; i++) {
+            if (studentList[i].id1 === del) {
+                let delete1 = confirm("Bạn có muốn xóa" + studentList[i].id1 + "?")
+                if(delete1) {
+                    studentList.splice(i, 1);
+                }else{
+                    showList(studentList);
+                }
+            }else{
+                alert("Mã không tồn tại");
+            }
+        }
+        showList(studentList);
+    }
+</script>
 </body>
 </html>
