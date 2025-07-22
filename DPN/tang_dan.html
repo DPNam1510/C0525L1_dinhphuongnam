@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Index:");
+    let check = true;
+    if (n <= 20) {
+        let arr = new Array(n);
+        for (let i = 0; i < arr.length; i++) {
+            let count = 0;
+            arr[i] = prompt(`Number ${i + 1}`);
+            if (arr[i] < arr[i + 1]) {
+                check = true;
+                count++
+            }
+        }
+        if (check) {
+            alert("OK");
+        } else {
+            alert("NO");
+        }
+    } else {
+        alert("Nhập lại");
+    }
+</script>
+</body>
+</html>

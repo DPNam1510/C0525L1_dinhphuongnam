@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPN</title>
+</head>
+<body>
+<script>
+    function find(x) {
+        let arr = x.split("/");
+        if (arr.length === 2) {
+            let tuSo = arr[0];
+            let mauSo = arr[1];
+            if (!isNaN(tuSo) && !isNaN(mauSo) && mauSo !== 0) {
+                let kq = tuSo / mauSo;
+                return `${kq}`;
+            }else{
+                return `Không thỏa mãn`
+            }
+        }else{
+            alert("Nhập lại");
+        }
+    }
+    let num = prompt("Input:");
+    alert(find(num));
+</script>
+</body>
+</html>
