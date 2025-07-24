@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>DPN</title>
 </head>
 <body>
-$END$
+<script>
+  let n = +prompt("Quantity index:");
+  let array = new Array(n);
+  let check = true;
+  if (n >= 2 && n % 2 === 0) {
+    for (let i = 0; i < array.length; i++) {
+      array[i] = +prompt(`Index ${i + 1}`);
+    }
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] < array[i + 1]) {
+        check = true;
+        i++;
+      }else{
+        check = false;
+        break;
+      }
+    }
+    if (check) {
+      alert("OK");
+    }else{
+      alert("NO");
+    }
+  }
+</script>
 </body>
 </html>

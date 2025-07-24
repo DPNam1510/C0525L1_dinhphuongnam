@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>DPN</title>
 </head>
 <body>
-$END$
+<button type="submit" onclick="addTelephone()">Add telephone</button>
+<button type="submit" onclick="alphabet()">Alphabet</button>
+<p id="result"></p>
+<script>
+    class telephone {
+        _id;
+        _name;
+        _locate;
+        _price;
+
+        constructor(id, name, locate, price) {
+            this._id = id;
+            this._name = name;
+            this._locate = locate;
+            this._price = price;
+        }
+    }
+
+    let telephoneList = [];
+    showList(telephoneList);
+
+    function showList(list) {
+        let showTable = `<table border="1" style="border-collapse: collapse">
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Locate</th>
+<th>Price</th>
+</tr>`
+        for (let i = 0; i < list.length; i++) {
+            showTable += `<tr>
+<td>${list[i]._id}</td>
+<td>${list[i]._name}</td>
+<td>${list[i]._locate}</td>
+<td>${list[i]._price}</td>
+</tr>`
+        }
+        showTable += `</table>`;
+        document.getElementById("result").innerHTML = showTable;
+    }
+
+    function addTelephone() {
+        let id = prompt("Add id:");
+        let name = prompt("Add name:");
+        let locate = prompt("Add locate:");
+        let price = prompt("Add price:");
+        let newTelephone = new telephone(id, name, locate, price);
+        telephoneList.push(newTelephone);
+        showList(telephoneList);
+    }
+    function alphabet(){}
+</script>
+
+
 </body>
 </html>

@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>DPN</title>
 </head>
 <body>
-$END$
+<script>
+    let array = prompt("Input:");
+    alert(check(array))
+
+    function check(arr) {
+        let checkA = arr.toUpperCase();
+        let index = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === checkA[i]) {
+                index++
+            }
+        }
+        return index;
+    }
+</script>
 </body>
 </html>

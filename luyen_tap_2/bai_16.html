@@ -9,13 +9,18 @@
 
     function coupleInput(arr) {
         for (let i = 0; i < arr.length; i++) {
-            let check = true
+            let newArr = [];
             if (arr[i] + arr[i + 1] === arr[i + 2]) {
-                check = true;
-                i++;
+                newArr.push(arr[i]);
+                newArr.push(arr[i+1]);
+                newArr++;
+            }else{
+                break;
             }
         }
     }
+    let array = [1,2,3,5,8]
+    alert(coupleInput(array));
 </script>
 </body>
 </html>
